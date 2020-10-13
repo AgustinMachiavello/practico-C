@@ -192,10 +192,105 @@ void loadCoord(int cant, int coordX[], int coordY[], char region[])
 /////////////////////// AQUI VAN LAS FUNCIONES A IMPLEMENTAR /////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
+//EJERCICIO 2
+
+/**
+* Calcula la distancia entre dos pares de coordenadas
+*
+* @param x1
+* @param y1
+* @param x2
+* @param y2
+* @return Disatancia entre dos puntos
+*/
+int distancia(int x1, int y1, int x2, int y2)
+{
+    //Se debe devolver --> raiz cuadrada de: (x2 −x2)^2 +(y2 −y2)^2
+}
+
+/**
+* Calcula el centroide dado dos arrays de puntos
+*
+* @param coord almacenar las coordenadas (x, y) del centroide a calcular
+* @param coordX coordenadas x de los puntos
+* @param coordY coordenadas y de los puntos
+* @param tam tamanio de los vectores
+* @return Coordneadas X e Y del centroide
+*/
+int centroide(int coord[], int coordX[], int coordY[], int tam)
+{
+    /*
+    int CentX
+    int CentY
+    int sumCoordX
+    int sumCoordY
+
+    for cX in coordX
+        sumCoordX + cX
+    
+    for cY in coordY
+        sumCoordY + cY
+
+    return [1/tam * sumCoordX, 1/tam * sumCoordY] --> Devuelve un array de 2, con X e Y del centroide
+    */
+}
+
+/**
+* Calcula el angulo dado dos puntos (Figura 3)
+*
+* @param puntoA Coordenadas centroide A
+* @param puntoB Coordenadas centroide B
+* @return Angulo en grados
+*/
+int calcularAngulo(int puntoA[], int puntoB[])
+{
+    /*
+        Este está complicado jaja, todavía no entendí bien el cálculo
+    */
+}
+
+
+//Ejercicio 3
+
+/**
+* Resuelve si el ojo está abierto
+*
+* @param punto1 Coordenadas del punto 1 y 2 del ojo
+* @return True: Ojo abierto
+*/
+int ojoAbierto(int punto1, int punto2)
+{
+    /*
+    Si la distancia entre estos puntos de cada OJO es menor a 30 px --> Está cerrado
+    Imprimir en pantalla: distancia y si está abierto o cerrado
+    return --> si distancia(punto1, punto2) > 30: True, de lo contrario, False
+    */
+}
+
+// TODO Parte 2 y 3 del Ejercicio 3
+
 int main()
 {
 
     //////////////////////////////////////////////////////////////////////////////////////
     /////////////////////// AQUI VA EL CUERPO DEL PROGRAMA COMPLETO /////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////
+
+    // EJERCICIO 1
+
+    // Cargar en dos variables enteras la dimensi ́on (n) de los vectores coordenadas
+    int NojoIzq = loadRango("#ojoIzq");
+    int NojoDer = loadRango("#ojoDer");
+    int NbocInt = loadRango("#bocaInt");
+
+    //Defino array para las coord (x,y) de ambos ojos y el interior de la boca
+    int xOjoIzq[NojoIzq], yOjoIzq[NojoIzq];
+    int xOjoDer[NojoDer], yOjoDer[NojoDer];
+    int xBocaInt[NbocInt], yBocaInt[NbocInt];
+
+    //Cargo las coordenadas en los array definidos
+    loadCoord(NojoIzq, xOjoIzq, yOjoIzq, "#ojoIzq");
+    loadCoord(NojoDer, xOjoDer, yOjoDer, "#ojoDer");
+    loadCoord(NbocInt, xBocaInt, yBocaInt, "#bocInt");
+    fprintf(stderr, "Inicio\n");
 }
